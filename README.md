@@ -133,7 +133,7 @@ Managers can experiment with staffing, delivery schedules, and route allocations
 
 | Application       | URL                                                                                     |
 |-------------------|-----------------------------------------------------------------------------------------|
-| Frontend (React)  | [https://greencart-logistics-git-main-devendra-dhakeds-projects.vercel.app](https://greencart-logistics-git-main-devendra-dhakeds-projects.vercel.app) |
+| Frontend (React)  | [https://greencart-logistics-git-main-devendra-dhakeds-projects.vercel.app](https://greencart-logistics-git-main-devendra-dhakeds-projects.vercel.app?_vercel_share=1TR7Ifhc0YwIj6cyDaV1O8kjvDy4Jwk0) |
 | Backend API       | [https://greencart-logistics-sssg.onrender.com/api](https://greencart-logistics-sssg.onrender.com/api)                           |
 | Database          | Cloud PostgreSQL (Neon or equivalent)                                                  |
 | API Docs          | [https://greencart-logistics-sssg.onrender.com/api-docs](https://greencart-logistics-sssg.onrender.com/api-docs)                   |
@@ -166,5 +166,6 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 
 Devendra Dhaked – August 2025  
 [GitHub](https://github.com/dhakeddevendra5)
+
 
 
