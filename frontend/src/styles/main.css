@@ -1,0 +1,13 @@
+/* frontend/src/styles/main.css */
+body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f5f7fb; color:#222; }
+.navbar { display:flex; justify-content:space-between; padding:12px 20px; background:#0b6; color:white; align-items:center; }
+.navbar a { color:white; margin-right:12px; text-decoration:none; }
+.container { padding:20px; }
+.card { background:white; padding:16px; margin:12px 0; border-radius:8px; box-shadow:0 1px 4px rgba(0,0,0,0.08); }
+.grid { display:flex; gap:16px; flex-wrap:wrap; }
+.kpis { display:flex; gap:12px; flex-wrap:wrap; }
+.kpi { background:white; padding:12px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.08); }
+input, select, button { display:block; margin:8px 0; padding:8px; width:100%; max-width:320px; }
+button { cursor:pointer; background:#0b6; color:white; border:none; border-radius:6px; padding:8px 12px; }
+.error { color:#b00020; }
+.loader { padding:16px; }
