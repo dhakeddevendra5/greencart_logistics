@@ -98,12 +98,21 @@ Managers can experiment with staffing, delivery schedules, and route allocations
    ```   
 # Deployment Instructions
 - **Backend:** Deployed on Render.com
-   - Connected to a cloud PostgreSQL instance
-   - Environment variables configured via Render dashboard
-   - Automatic deployments linked to GitHub repo
+   - Connect your GitHub repo.
+   - Set environment variables (```DATABASE_URL```, ```JWT_SECRET```, etc.) in Render dashboard.
+   - Build command:
+     ```npm install```
+   - Start command:
+     ```node src/server.js or npm run dev```
+   - Auto deploys on push to ```main``` branch.
+   - Use cloud PostgreSQL instance (Neon, Supabase, etc.).
 - **Frontend:** Deployed on Vercel
-   - Connected to backend API URL
-   - Continuous deployment from GitHub
+   - Connect GitHub repo.
+   - Select React framework preset.
+   - Build command: ```npm run build```
+   - Output directory: ```build```
+   - Add environment variables (e.g. ```REACT_APP_API_URL```) in Vercel dashboard.
+   - Auto deploys on push to ```main```.
 
 # Project Structure
    ```
@@ -112,4 +121,50 @@ Managers can experiment with staffing, delivery schedules, and route allocations
    ├── frontend/           # React.js frontend code
    ├── README.md
    └── ...
+   ```
+
+# Live Check
+   Frontend Link:
+   ```
+   https://greencart-logistics-git-main-devendra-dhakeds-projects.vercel.app?_vercel_share=1TR7Ifhc0YwIj6cyDaV1O8kjvDy4Jwk0
+   ```
+
+## Live Deployment Links
+
+| Application       | URL                                                                                     |
+|-------------------|-----------------------------------------------------------------------------------------|
+| Frontend (React)  | [https://greencart-logistics-git-main-devendra-dhakeds-projects.vercel.app](https://greencart-logistics-git-main-devendra-dhakeds-projects.vercel.app) |
+| Backend API       | [https://greencart-logistics-sssg.onrender.com/api](https://greencart-logistics-sssg.onrender.com/api)                           |
+| Database          | Cloud PostgreSQL (Neon or equivalent)                                                  |
+| API Docs          | [https://greencart-logistics-sssg.onrender.com/api-docs](https://greencart-logistics-sssg.onrender.com/api-docs)                   |
+
+---
+
+## API Documentation
+
+| Endpoint              | Method | Description                     | Request Body / Headers                                 | Response Example                         |
+|-----------------------|--------|---------------------------------|-------------------------------------------------------|-----------------------------------------|
+| `/api/auth/login`     | POST   | Authenticate user, returns JWT   | `{ "username": "manager", "password": "password123" }` | `{ "token": "jwt-token" }`               |
+| `/api/drivers`        | GET    | Get list of drivers (auth req.)  | Header: `Authorization: Bearer <token>`                | `[ { "id": 1, "name": "John Doe", ...} ]` |
+| `/api/drivers`        | POST   | Create a new driver              | `{ "name": "John Doe", "shiftHours": 8 }`              | Created driver object                    |
+| `/api/routes`         | CRUD   | Manage delivery routes           | See schema for route properties                         | Created/updated/deleted route            |
+| `/api/orders`         | CRUD   | Manage delivery orders           | `{ "orderId": "...", "value": 1200, "routeId": 5 }`    | Created/updated/deleted order            |
+| `/api/simulations/run`| POST   | Run a delivery simulation        | `{ "numDrivers": 5, "startTime": "09:00", "maxHours": 8 }` | Simulation KPIs and details             |
+
+> **Note:** All protected routes require a valid JWT token in the `Authorization` header.
+
+---
+
+
+## License
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
+---
+
+## Author
+
+Devendra Dhaked – August 2025  
+[GitHub](https://github.com/dhakeddevendra5)
+
 
