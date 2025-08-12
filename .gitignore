@@ -1,0 +1,42 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-error.log*
+.env
+.DS_Store
+
+# Backend
+/backend/node_modules/
+/backend/.env
+/backend/dist/
+/backend/build/
+
+# Frontend
+/frontend/node_modules/
+/frontend/.env
+/frontend/build/
+
+# Logs
+logs
+*.log
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# OS files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDE files (VSCode, IntelliJ, etc.)
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Misc
+coverage/
+*.tsbuildinfo
