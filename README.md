@@ -37,3 +37,5 @@ Managers can experiment with staffing, delivery schedules, and route allocations
    ```bash
    git clone https://github.com/dhakeddevendra5/greencart_logistics.git
    cd greencart-logistics/backend
+
+2. Install dependencies:
